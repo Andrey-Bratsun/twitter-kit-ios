@@ -266,7 +266,7 @@ static id<TWTRSessionStore_Private> TWTRSharedSessionStore = nil;
 - (void)sendTweetWithText:(NSString *)tweetText videoData:(NSData *)videoData completion:(TWTRSendTweetCompletion)completion
 {
     // Keep the limit to be 5M to qualify for image/media upload, not using separate chunk upload
-    const long long kVideoMaxFileSize = 5 * 1024 * 1024;
+    const long long kVideoMaxFileSize = 15 * 1024 * 1024;
 
     if (videoData == nil) {
         NSLog(@"Error: video data is empty");
